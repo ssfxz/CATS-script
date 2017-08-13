@@ -2,6 +2,8 @@ import os
 import time
 from PIL import Image
 
+ATK = 365;
+
 while 1:
 	os.popen("adb shell /system/bin/screencap -p /storage/0000-0000/screenshot.png");
 	os.popen("adb pull /storage/0000-0000/screenshot.png .");
@@ -13,6 +15,7 @@ while 1:
 		os.popen("adb shell input tap 1500 1400");
 		print("fight");
 	elif image.getpixel((300, 215)) == (255, 255, 255, 255):
+		# if ATK
 		os.popen("adb shell input tap 2300 400");
 		print("action");
 	elif image.getpixel((1310, 1310)) == (210, 35, 37, 255):
@@ -21,3 +24,4 @@ while 1:
 	
 	print("sleep");
 	time.sleep(1);
+	print("week up");
