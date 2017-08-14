@@ -13,11 +13,21 @@ while 1:
 	
 	if image.getpixel((1800, 1300)) == (231, 217, 203, 255):
 		os.popen("adb shell input tap 1500 1400");
-		print("fight");
+		print("start");
+
 	elif image.getpixel((300, 215)) == (255, 255, 255, 255):
-		# if ATK
-		os.popen("adb shell input tap 2300 400");
-		print("action");
+		box = (1300, 150, 1550, 270);
+		region = image.crop(box);
+		outfile = 'tmp1.png'
+		region.save(outfile)
+
+		if 0 :
+			os.popen("adb shell input tap 2400 1400");
+			print("Skip");
+		else :
+			os.popen("adb shell input tap 2300 400");
+			print("Fight");
+			
 	elif image.getpixel((1310, 1310)) == (210, 35, 37, 255):
 		os.popen("adb shell input tap 1300 1400");
 		print("done");
