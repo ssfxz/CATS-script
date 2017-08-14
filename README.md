@@ -1,3 +1,3 @@
 # CATS-script
 
-Automatic game script by adb and ocr
+Automatic game script base on adb and ocr
