@@ -15,4 +15,3 @@ brew install leptonica
 brew install --with-training-tools tesseract
 
 验证tesseract-ocr安装成功：tesseract -v
-
