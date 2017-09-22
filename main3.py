@@ -37,7 +37,7 @@ def getScreenPixel(pos):
 	colorG = int('0x' + colorFile.read(2), 16)
 	colorFile.seek(1, 1)
 	colorB = int('0x' + colorFile.read(2), 16)
-	print "Color: %s %s %s" % (colorR, colorG, colorB)
+	# print "Color: %s %s %s" % (colorR, colorG, colorB)
 	print "\t\tfinish fetch screenshot."
 	return (colorR, colorG, colorB, 255);
 
