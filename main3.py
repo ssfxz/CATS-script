@@ -25,7 +25,7 @@ def withSleep(t, action):
 lastImage = None
 
 def getScreenPixel(pos):
-	print "\t\tbegin screenshot..."
+	# print "\t\tbegin screenshot..."
 	# print pos
 	# pos = (1,1)
 	offset = (pos[1] * 2560 + pos[0]) * 4
@@ -38,7 +38,7 @@ def getScreenPixel(pos):
 	colorFile.seek(1, 1)
 	colorB = int('0x' + colorFile.read(2), 16)
 	# print "Color: %s %s %s" % (colorR, colorG, colorB)
-	print "\t\tfinish fetch screenshot."
+	# print "\t\tfinish fetch screenshot."
 	return (colorR, colorG, colorB, 255);
 
 def startFastFight():
